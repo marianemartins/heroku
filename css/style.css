@@ -1,0 +1,622 @@
+/* #region Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+/* #endregion */
+
+/* #region Root */
+
+:root {
+    --text-primary: #0066ff;
+    --text-secondary: rgb(255, 255, 255);
+}
+
+/* #endregion */
+
+/* #region Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+/* #endregion */
+
+/* #region Framework */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+.flex { display: flex; }
+.column { flex-direction: column; }
+.space_between { justify-content: space-between; }
+.space_around { justify-content: space-around; }
+.wrap { flex-wrap: wrap; }
+.align_center { align-items: center; }
+.marginrigthsmall { margin-right: 8px; }
+.marginleftsmall { margin-left: 8px; }
+.marginleftrightsmall { margin: 0 8px; }
+.maginbottomsmall { margin-bottom: 8px ; }
+.maginbottommedium { margin-bottom: 16px ; }
+ul { list-style-type: none; }
+.w100 { width: 100%; }
+.w70 { width: 70%; }
+.w60 { width: 60%; }
+.w55 { width: 55%; }
+.w50 { width: 50%; }
+.w45 { width: 45%; }
+.w40 { width: 40%; }
+.w30 { width: 30%; }
+section { margin-top: 32px; }
+
+/* #endregion */
+
+/* #region Menu Acessibilidade */
+
+.botao_menu {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 40px;
+    z-index: 1;
+    padding: 0;
+}
+
+.menu_acessibilidade {
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.menu_acessibilidade > a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu_acessibilidade a:not(.menu_acessibilidade_fonte a):hover {
+    text-decoration: underline;
+}
+
+.switch_font {
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #000;
+}
+
+.switch_font:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.menu_acessibilidade_tema {
+    align-items: center;
+}
+
+.menu_acessibilidade_tema p {
+    margin-right: 5px;
+}
+
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+  
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch--shadow + label {
+    padding: 2px;
+    width: 60px;
+    height: 30px;
+    background-color: #dddddd;
+    border-radius: 30px;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+}
+
+.switch--shadow + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    transition: all 0.4s;
+}
+
+.switch--shadow + label:after {
+    width: 31px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.switch--shadow:checked + label:before {
+    background-color: #484848;
+}
+
+.switch--shadow:checked + label:after {
+    transform: translateX(30px);
+}
+
+/* #endregion */
+
+/* #region Header */
+
+header {
+    height: 106px;
+    position: relative;
+    top: 40px;
+}
+
+.header {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-right: 16px;
+    height: 40px;
+    align-items: center;
+}
+
+.input_search {
+    width: 518px;
+    height: 42px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding-right: 12px;
+}
+
+input[type='search'] {
+    font-family: 'Inter';
+    border: 0;
+    width: 95%;
+    height: 100%;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.input_search>i {
+    color: #2D9CDB;
+}
+
+.breadcrumb {
+    margin-top: 40px;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb a:not(:first-child) {
+    margin-left: 5px;
+}
+
+/* #endregion */
+
+/* #region Index */
+
+.banner_imagem {
+    width: auto;
+    padding: 100px;
+    margin-top: 16px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://blog.consumer.com.br/wp-content/uploads/2020/11/culin%C3%A1ria-regional-brasileira.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-secondary)
+}
+
+.titulo_secao {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align-last: center;
+}
+
+.cards {
+    justify-content: space-around;
+}
+
+.card {
+    transition: 0.3s;
+    margin: 16px 0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    border: solid 1px #e4e4e4;
+    width: 30%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.image_card {
+    border-radius: 8px 8px 0 0;
+    max-width:100% ;
+}
+
+.container_card {
+    padding: 8px 16px;
+}
+
+.stars {
+    color: #000000;
+    justify-content: space-between;
+}
+
+.possui {
+    justify-content: space-between;
+}
+
+.possui p {
+    color: #000;
+}
+
+.fa-check {
+    color:  #27AE60;
+}
+
+.max {
+    max-width: 60%;
+    margin-left: 20%;
+}
+
+.max h1 {
+    color: var(--text-primary);
+    margin: 30px 0;
+    font-size: 2rem;
+}
+
+.max h3,
+.max strong,
+.max p {
+    margin-top: 12px;
+}
+
+footer{
+    background-color: rgb(221, 221, 221);
+    margin-top: 30px;
+}
+
+.rodape {
+    padding: 40px 2%;
+}
+
+.cont a{
+    text-decoration: none;
+    color: #000;
+}
+
+.redes {
+    align-items: flex-end;
+}
+
+.redes ul {
+    margin-top: 10px;
+}
+
+.redes ul li{
+    margin-left: 10px;
+}
+
+.redes a i{
+    color: rgb(29, 29, 29);
+    font-size: 1.2rem;
+}
+
+/* #endregion */
+
+/* #region Página do restaurante */
+
+    /* #region Restaurante Card */
+
+    .restaurante_card {
+        border-radius: 22px;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .restaurante_card picture,
+    .restaurante_card picture img {
+        border-radius: 22px 0 0 22px;
+    }
+
+    .card_content {
+        padding: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .restaurante_info {
+        justify-content: space-between;
+    }
+
+    .restaurante_acessibilidade {
+        justify-content: space-between;
+    }
+
+    .restaurante_acessibilidade .fa-times {
+        color: tomato;
+    }
+
+    .restaurante_site a {
+        color: #2D9CDB;
+        text-decoration: none;
+    }
+
+    /* #endregion */
+
+    /* #region Restaurante Localização */
+
+    .localizacao {
+        margin-top: 20px;
+    }
+
+    .localizacao picture,
+    .localizacao picture img {
+        border-radius: 22px;
+    }
+
+    .localizacao_content {
+        padding: 0 20px;
+    }
+
+    .localizacao_endereco,
+    .localizacao_comochegar,
+    .localizacao_sobrearegiao {
+        margin-top: 10px;
+    }
+
+    /* #endregion */
+
+    /* #region Restaurante Avaliações */
+
+    .avaliacoes_cards {
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    .avaliacao_card {
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .avaliacao_card div,
+    .avaliacao_card p {
+        margin-top: 10px;
+    }
+
+    .avaliacao_button {
+        margin-top: 40px;
+    }
+
+    .avaliacao_button button {
+        cursor: pointer;
+        padding: 20px 50px;
+        background-color: var(--text-primary);
+        color: var(--text-secondary);
+        font-size: 1rem;
+        font-weight: 400;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .avaliacao_button button:hover {
+        transition: 0.2s;
+        background-color: #0045ad;
+    }
+
+    /* #endregion */
+
+/* #endregion */
+
+/* #region Responsividade */
+
+@media screen and (max-width: 1203px) {
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 45%;
+    }
+
+    .flex_viewport {
+        flex-direction: column;
+    }
+
+    .image_detail {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        object-fit: cover;
+    }
+
+    .breve_descricao {
+        margin-top: 32px;
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 3%;
+    }
+    .restaurante_card {
+        flex-direction: column;
+    }
+
+    .restaurante_card picture,
+    .restaurante_card picture img {
+        width: 100%;
+        border-radius: 22px 22px 0 0;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .card_content {
+        width: 100%;
+    }
+
+    .restaurante_info,
+    .restaurante_acessibilidade {
+        width: 70%;
+    }
+
+    .restaurante_info,
+    .restaurante_acessibilidade,
+    .restaurante_site,
+    .restaurante_descricao {
+        margin-top: 10px;
+    }
+
+    .localizacao {
+        flex-direction: column;
+    }
+
+    .localizacao picture,
+    .localizacao picture img {
+        width: 100%;
+    }
+
+    .localizacao_content {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .avaliacoes_cards {
+        flex-direction: column;
+    }
+
+    .avaliacao_card {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .avaliacao_button,
+    .avaliacao_button button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 807px) {
+    .botao_menu {
+        display: block;
+        position: fixed;
+        padding: 10px;
+        top: 0;
+        z-index: 2;
+        height: 40px;
+        align-items: center;
+        background-color: #f5f5f5;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .botao_menu i {
+        color: var(--text-primary);
+    }
+
+    .botao_abrir {
+        display: inline;
+    }
+
+    .botao_fechar {
+        display: none;
+    }
+
+    nav {
+        height: 200px;
+        top: -210px;
+    }
+
+    .menu_acessibilidade {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .header,
+    .cards,
+    .rodape,
+    .cont {
+        flex-direction: column;
+    }
+
+    .input_search,
+    .input_search,
+    .card {
+        width: 100%;
+    }
+
+    .redes {
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        margin-top: 60px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .ajuda,
+    .redes {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .restaurante_info,
+    .restaurante_acessibilidade {
+        width: 100%;
+    }
+}
+
+/* #endregion */

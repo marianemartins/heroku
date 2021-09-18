@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <title>Acessibilidade | Projeto Traveller</title>
+</head>
+
+<body>
+    <div class="botao_menu flex">
+        <i class="fab fa-accessible-icon"></i>
+        <p class="botao_abrir">Menu de acessibilidade</p>
+        <p class="botao_fechar">Fechar menu</p>
+    </div> <!-- botao_menu -->
+
+    <nav>
+        <div class="menu_acessibilidade flex container">
+            <a accesskey="1" href="#principal">Ir para conteúdo principal (Alt + 1)</a>
+            <div class="menu_acessibilidade_fonte">
+                <a onClick="alterarFonte('a');" class="switch_font" href="#">A+</a>
+                <a onClick="alterarFonte('d');" class="switch_font" href="#">A-</a>
+            </div> <!-- menu_acessibilidade_fonte -->
+            <div class="menu_acessibilidade_tema flex">
+                <p>Tema</p>
+                <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+                <label for="switch-shadow"></label>
+            </div> <!-- menu_acessibilidade_tema -->
+            <a accesskey="2" href="#">Acessibilidade do site (Alt + 2)</a>
+        </div> <!-- menu_acessibilidade -->
+    </nav>
+
+    <header>
+        <div class="container header">
+            <a href="../index.html"><img class="logo" src="../images/header/Logo_Traveller.svg" alt="logo Traveller"></a>
+            <div class="input_search flex space_between align_center">
+                <input type="search" name="pesquisa" id="pesquisa" placeholder="Buscar ponto turístico">
+                <i class="fas fa-search-location"></i>
+            </div> <!-- input-search -->
+        </div> <!-- container -->
+    </header>
+
+    <div class="breadcrumb container">
+        <ul class="flex">
+            <a href="../index.html"><li>Home > </li></a>
+            <a href="../index.html"><li>Acessibilidade</li></a>
+        </ul>
+    </div> <!-- breadcrumb -->
+
+    <hr>
+
+    <article id="principal" class="container">
+        <div class="max">
+            <h1>Acessibilidade</h1>
+            <strong>
+                Acreditamos que todos os nossos visitantes devem acessar nosso conteúdo e, por isso, nos esforçamos para oferecer uma experiência única em acessibilidade. 
+            </strong>
+            <p>Como 18,6% da população possui algum tipo de deficiência visual (IBGE, 2010), optamos por entender as necessidades desse público para desenvolver funcionalidades adequadas a eles. Aplicamos um questionário e 17 pessoas colaboram conosco, dentre elas: 10 com cegueira, 1 com dislexia e 6 com baixa visão.</p>
+            <p>Foram feitas 4 perguntas. “Quais funcionalidades você considera mais adequadas as suas necessidades ao acessar um site?” foi a primeira pergunta. Navegação pelo teclado e usando leitor de tela, descrição das imagens, aumentar o tamanho das letras, contraste das cores e botões acessíveis foram as respostas que recebemos.</p>
+            <p>A segunda pergunta foi “Quais principais dificuldades você encontra ao acessar um site com frequência?”. As respostas obtidas foram: Muitos banners e propagandas atrapalham a navegação, os leitores de tela não fazem a leitura correta dos formulários, navegação por gráficos, captcha acaba sendo um desafio mesmo com recursos de áudio, site com muito brilho e imagem sem descrição.</p>
+            <p>A terceira pergunta foi: “Quais pontos de melhoria você entende que facilitariam a navegação em um site?”. Sites com muitas etapas de navegação, não ter caixas de verificação, imagens com legendas, fazer inversão de cores e navegação com o conteúdo completamente exposto e em lista foram os principais pontos de melhoria.</p>
+            <p>A última pergunta foi: “Você encontra dificuldades ao buscar informações de acessibilidade em restaurantes que deseja ir? Se sim, quais informações você gostaria de ter a descrição prévia.”. O restaurante oferecer um cardápio digital com as funcionalidades descritas acima e cardápio físico em braile foram as principais dificuldades enfrentadas.</p>
+            <p>Nem todas as funcionalidades foram aplicadas nesse projeto, porém, todo o conhecimento adquirido com esse público é de extrema importância para futuros desenvolvimentos. Queremos agradecer a participação de todos que nos deram essa oportunidade.</p>
+            <p>Agora, vamos falar um pouco do nosso site. Abaixo temos a lista de funcionalidades para navegação o mais fácil possível.</p>
+            <h3>Layout do site</h3>
+            <p>O layout foi estruturado para uma navegação simples usando o leitor de tela. Usamos HTML5 semântico com as tags apropriadas para identificar de títulos e seções, além de recursos para a formatação do conteúdo.</p>
+            <p>A visualização do site em dispositivos menores também foi pensada para manter as letras em um tamanho que facilite a leitura.</p>
+            <h3>Navegação pelo teclado</h3>
+            <p>Todo conteúdo foi desenvolvido em lista para não ter nenhum tipo de sobreposição. Ao clicar nas imagens da tela principal é direcionado as demais informações do restaurante e para retornar a tela anterior basta selecionar as teclas Alt + 1.</p>
+            <h3>Zoom</h3>
+            <p>Um diferencial desse site é a possibilidade de aumentar o texto conforme a necessidade do usuário, não tedo limitação.</p>
+            <h3>Mudança do tema</h3>
+            <p>A mudança da cor para obter maior contraste também está disponível no cabeçalho da página.</p>
+            <h3>Descrição das Imagens</h3>
+            <p>Todas as imagens contêm a descrição do seu conteúdo, assim, os leitores de tela podem transmitir via áudio esse conteúdo.</p>
+            <h3>Acessibilidade nos restaurantes</h3>
+            <p>Foi incluída a sinalização caso o restaurante permita ou não entrada de cães-guia e se disponibiliza cardápio em braile.</p>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container flex space_between rodape">
+            <div class="cont flex w60 space_between">
+                <div class="institucional">
+                    <strong>Institucional</strong>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Seja um parceiro</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="ajuda">
+                    <strong>Ajuda</strong>
+                    <ul>
+                        <li>Tel:7575-6486</li>
+                        <li>De segunda à sábado das 08:00 às 20:00 horas, exceto feriados</li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="redes w30 flex column">
+                <strong>Redes sociais</strong>
+                <ul class="flex">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/constants.js"></script>
+    <script src="../js/dark-mode.js"></script>
+
+</body>

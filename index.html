@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <title>Restaurantes | Projeto Traveller</title>
+</head>
+
+<body>
+    <div class="botao_menu flex">
+        <i class="fab fa-accessible-icon"></i>
+        <p class="botao_abrir">Menu de acessibilidade</p>
+        <p class="botao_fechar">Fechar menu</p>
+    </div> <!-- botao_menu -->
+
+    <nav>
+        <div class="menu_acessibilidade flex container">
+            <a accesskey="1" href="#principal">Ir para conteúdo principal (Alt + 1)</a>
+            <div class="menu_acessibilidade_fonte">
+                <a onClick="alterarFonte('a');" class="switch_font" href="#">A+</a>
+                <a onClick="alterarFonte('d');" class="switch_font" href="#">A-</a>
+            </div> <!-- menu_acessibilidade_fonte -->
+            <div class="menu_acessibilidade_tema flex">
+                <p>Tema</p>
+                <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+                <label for="switch-shadow"></label>
+            </div> <!-- menu_acessibilidade_tema -->
+            <a accesskey="2" href="pages/acessibilidade.html">Acessibilidade do site (Alt + 2)</a>
+        </div> <!-- menu_acessibilidade -->
+    </nav>
+
+    <header>
+        <div class="container header">
+            <img class="logo" src="./images/header/Logo_Traveller.svg" alt="logo Traveller">
+            <div class="input_search flex space_between align_center">
+                <input type="search" name="pesquisa" id="pesquisa" placeholder="Buscar ponto turístico">
+                <i class="fas fa-search-location"></i>
+            </div> <!-- input_search -->
+        </div> <!-- container -->
+    </header>
+
+    <div class="breadcrumb container">
+        <ul class="flex">
+            <a href="#"><li>Home > </li></a>
+            <a href="#"><li><strong>Gastronomia</strong></li></a>
+        </ul>
+    </div> <!-- breadcrumb -->
+
+    <main id="principal">
+        <div class="container flex column">
+            <div class="banner_imagem">
+                <div class="banner_text">
+                    <h1>Gastronomia</h1>
+                </div> <!-- banner_text -->
+            </div> <!-- banner_imagem -->
+
+            <section>
+                <div class="titulo_secao">
+                    <h2>Restaurantes em São Paulo para sua tour gastronômica</h2>
+                    <p>Escolha o seu destino abaixo</p>
+                </div> <!-- titulo_secao -->
+
+                <div class="cards flex wrap"></div> <!-- cards -->
+            </section>
+        </div> <!-- container -->
+    </main>
+
+    <footer>
+        <div class="container flex space_between rodape">
+            <div class="cont flex w60 space_between">
+                <div class="institucional">
+                    <strong>Institucional</strong>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Seja um parceiro</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="ajuda">
+                    <strong>Ajuda</strong>
+                    <ul>
+                        <li>Tel:7575-6486</li>
+                        <li>De segunda à sábado das 08:00 às 20:00 horas, exceto feriados</li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="redes w30 flex column">
+                <strong>Redes sociais</strong>
+                <ul class="flex">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/restaurantes.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+</body>
+
+</html>

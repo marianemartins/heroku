@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <title>Restaurante Riconcito Peruano | Projeto Traveller</title>
+</head>
+
+<body>
+    <div class="botao_menu flex">
+        <i class="fab fa-accessible-icon"></i>
+        <p class="botao_abrir">Menu de acessibilidade</p>
+        <p class="botao_fechar">Fechar menu</p>
+    </div> <!-- botao_menu -->
+
+    <nav>
+        <div class="menu_acessibilidade flex container">
+            <a accesskey="1" href="#principal">Ir para conteúdo principal (Alt + 1)</a>
+            <div class="menu_acessibilidade_fonte">
+                <a onClick="alterarFonte('a');" class="switch_font" href="#">A+</a>
+                <a onClick="alterarFonte('d');" class="switch_font" href="#">A-</a>
+            </div> <!-- menu_acessibilidade_fonte -->
+            <div class="menu_acessibilidade_tema flex">
+                <p>Tema</p>
+                <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+                <label for="switch-shadow"></label>
+            </div> <!-- menu_acessibilidade_tema -->
+            <a accesskey="2" href="acessibilidade.html">Acessibilidade do site (Alt + 2)</a>
+        </div> <!-- menu_acessibilidade -->
+    </nav>
+
+    <header>
+        <div class="container header">
+            <a href="../index.html"><img class="logo" src="../images/header/Logo_Traveller.svg" alt="logo Traveller"></a>
+            <div class="input_search flex space_between align_center">
+                <input type="search" name="pesquisa" id="pesquisa" placeholder="Buscar ponto turístico">
+                <i class="fas fa-search-location"></i>
+            </div> <!-- input-search -->
+        </div> <!-- container -->
+    </header>
+    
+    <div class="breadcrumb container">
+        <ul class="flex">
+            <a href="../index.html"><li>Home > </li></a>
+            <a href="../index.html"><li>Gastronomia > </li></a>
+            <a href="#"><li><strong>Restaurante Riconcito Peruano</strong></li></a>
+        </ul>
+    </div> <!-- breadcrumb -->
+
+    <section class="section_card" id="principal">
+        <main>
+            <div class="container">
+                <div class="restaurante_card flex">
+                    <picture class="w45">
+                        <img class="w100" src="../images/restaurantes/principal_riconcito.jpg"
+                    alt="Foto de dois pratos do restaurante. Um contém o ceviche de salmão e o outro é uma carne refogada.">
+                    </picture>
+                    <div class="card_content flex w55">
+                        <h3>Restaurante Riconcito Peruano</h3>
+                        <div class="restaurante_info flex w70">
+                            <p>4.0</p>
+                            <div class="info_stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div> <!-- info_stars -->
+                            <p>(20)</p>
+                            <p>$$$</p>
+                            <p>Peruana</p>
+                        </div> <!-- restaurante_info -->
+    
+                        <div class="restaurante_acessibilidade flex">
+                            <small><i class="fas fa-check"></i> Refeição no local</small>
+                            <small><i class="fas fa-check"></i> Entrada de cães-guias</small>
+                            <small><i class="fas fa-times"></i> Cardápio em braile</small>
+                            <small><i class="fas fa-times"></i> Para viagem</small>
+                        </div> <!-- restaurante_acessibilidade -->
+    
+                        <div class="restaurante_site">
+                            <a target="_blank" href="https://www.rinconcitoperuano.com.br/"><i class="fas fa-globe"></i> Acesse o site aqui</a>
+                        </div> <!-- restaurante_site -->
+    
+                        <div class="restaurante_descricao">
+                            <p> Comida simples por um preço justo. Esse é o lema do restaurante. 
+                                Os principais pratos da casa são o ceviche peruano, o lomo saltado e o chaufa de mariscos. 
+                                Já a sobremesa recomendada é a torta tres leches.</p>
+                        </div> <!-- restaurante_descricao -->
+                    </div> <!-- card_content -->
+                </div> <!-- card -->
+            </div> <!-- container -->
+        </main>
+    </section> <!-- section_card -->
+    
+    <section class="section_localizacao">
+        <main>
+            <div class="container">
+                <h2>Localização</h2>
+                <div class="localizacao flex">
+                    <picture class="w40">
+                        <img class="w100" src="https://www.mapquestapi.com/staticmap/v5/map?key=SA2DRDN79suPRSWguBW0WeEnHdSSLjZF&amp;locations=-23.560093777729406,-46.656220155374626&amp;size=400,300"
+                        alt="Imagem com a localização do restaurante sinalizada no mapa">
+                    </picture>
+    
+                    <div class="localizacao_content w60">
+                        <div class="localizacao_endereco">
+                            <strong>Endereço:</strong>
+                            <address>R. Joaquim Floriano, 211 - Itaim Bibi, São Paulo - SP, 04534-010</address>
+                            <p>Aberto de terça a domingo das 12h às 22h00</p>
+                            <p>+55 11 2729 6919</p>
+                        </div> <!-- localizacao_endereco -->
+    
+                        <div class="localizacao_comochegar">
+                            <strong>Como chegar:</strong>
+                            <p>O acesso ao local pode ser feito pela avenidas Brigadeiro Luis Antônio, Presidente Juscelino Kubitschek ou Brigadeiro Faria Lima .</p>
+                        </div> <!-- localizacao_comochegar -->
+    
+                        <div class="localizacao_sobrearegiao">
+                            <strong>Sobre a região:</strong>
+                            <p>A Avenida Brigdadeiro Faria Lima, um dos polos empresariais e comerciais da cidade, é um dos principais atrativos. Além disso, a região é rica em diversidade gastronômica de alta qualidade.</p>
+                        </div> <!-- localizacao_sobrearegiao -->
+                    </div> <!-- localizacao_content -->
+                </div> <!-- localizacao -->
+            </div> <!-- container -->
+        </main>
+    </section> <!-- section_localizacao -->
+    
+    <section class="section_avaliacoes">
+        <main>
+            <div class="container">
+                <div class="avaliacoes">
+                    <h2>Veja o que as pessoas estão comentando</h2>
+                    <div class="avaliacoes_cards flex">
+                        <div class="avaliacao_card w30">
+                            <strong>Ruy L.</strong>
+                            <div class="avaliacao_estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div> <!-- avaliacao_estrelas -->
+                            <p>"O prato chaufa de mariscos é meu favorito. Os pratos servem até 3 pessoas, esse é um grande atrativo do local."</p>
+                        </div> <!-- avaliacao_card -->
+    
+                        <div class="avaliacao_card w30">
+                            <strong>Michele T.</strong>
+                            <div class="avaliacao_estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div> <!-- avaliacao_estrelas -->
+                            <p>"A comida é simples e saborosa. Os molhos para comer com o arroz são muito bons."</p>
+                        </div> <!-- avaliacao_card -->
+    
+                        <div class="avaliacao_card w30">
+                            <strong>Diego S.</strong>
+                            <div class="avaliacao_estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div> <!-- avaliacao_estrelas -->
+                            <p>"Gosto do local para levar minha família, o preço é justo."</p>
+                        </div> <!-- avaliacao_card -->
+                    </div> <!-- avaliacoes_cards -->
+
+                    <div class="avaliacao_button">
+                        <a href="../avaliar.html"><button>Avaliar</button></a>
+                    </div> <!-- avaliacao_button -->
+                </div> <!-- avaliacoes -->
+            </div> <!-- container -->
+        </main>
+    </section> <!-- section_avaliacoes -->
+
+    <footer>
+        <div class="container flex space_between rodape">
+            <div class="cont flex w60 space_between">
+                <div class="institucional">
+                    <strong>Institucional</strong>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Seja um parceiro</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="ajuda">
+                    <strong>Ajuda</strong>
+                    <ul>
+                        <li>Tel:7575-6486</li>
+                        <li>De segunda à sábado das 08:00 às 20:00 horas, exceto feriados</li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="redes w30 flex column">
+                <strong>Redes sociais</strong>
+                <ul class="flex">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/constants.js"></script>
+    <script src="../js/dark-mode.js"></script>
+</body>
+
+</html>
